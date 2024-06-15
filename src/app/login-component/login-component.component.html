@@ -1,0 +1,14 @@
+<div class="login">
+      <div class="login_center">
+            <div class="tabs">
+                  <!-- Angular语法里面使用 [class.className] 语法来动态绑定类 -->
+                  <button class="tab" [class.active]="activeTab === 'phone'" (click)="setActiveTab('phone')">手机快捷登录</button>
+                  <button class="tab" [class.active]="activeTab === 'password'" (click)="setActiveTab('password')">账号密码登录</button>
+            </div>
+            <div class="container">
+                  <app-first-component *ngIf="activeTab === 'phone'"></app-first-component>
+                  <app-two-component *ngIf="activeTab === 'password'"></app-two-component>
+            </div>
+      </div>
+     
+</div>
